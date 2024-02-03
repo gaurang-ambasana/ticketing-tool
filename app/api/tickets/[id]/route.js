@@ -1,4 +1,5 @@
 import Ticket from "@/app/(models)/Ticket";
+import { getErrorResponse } from "@/app/(utils)";
 import { NextResponse } from "next/server";
 
 export async function DELETE(_, { params: { id } }) {
@@ -6,7 +7,7 @@ export async function DELETE(_, { params: { id } }) {
     await Ticket.findByIdAndDelete(id);
     return NextResponse.json({ msg: "Ticket Deleted" }, { status: 200 });
   } catch (error) {
-    return NextResponse.json({ msg: "Error", error }, { status: 500 });
+    return getErrorResponse("Error", error, 500);
   }
 }
 
@@ -15,7 +16,7 @@ export async function GET(_, { params: { id } }) {
     const ticketData = await Ticket.findById(id);
     return NextResponse.json({ ticketData }, { status: 200 });
   } catch (error) {
-    return NextResponse.json({ msg: "Error", error }, { status: 500 });
+    return getErrorResponse("Error", error, 500);
   }
 }
 
@@ -32,6 +33,6 @@ export async function PUT(req, { params: { id } }) {
       { status: 200 }
     );
   } catch (error) {
-    return NextResponse.json({ msg: "Error", error }, { status: 500 });
+    return getErrorResponse("Error", error, 500);
   }
 }

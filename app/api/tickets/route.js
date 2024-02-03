@@ -12,7 +12,7 @@ export async function POST(req) {
       { status: 201 }
     );
   } catch (error) {
-    return NextResponse.json({ msg: "Error", error }, { status: 500 });
+    return getErrorResponse("Error", error, 500);
   }
 }
 
@@ -21,6 +21,6 @@ export async function GET() {
     const tickets = await Ticket.find({});
     return NextResponse.json({ tickets }, { status: 200 });
   } catch (error) {
-    return NextResponse.json({ msg: "Error", error }, { status: 500 });
+    return getErrorResponse("Error", error, 500);
   }
 }
