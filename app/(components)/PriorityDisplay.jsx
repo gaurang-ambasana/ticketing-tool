@@ -5,6 +5,10 @@ const PriorityDisplay = () => {
   return (
     <div>
       <FontAwesomeIcon icon={faFire} className="text-fire" />
+      <FontAwesomeIcon icon={faFire} className="text-fire" />
+      <FontAwesomeIcon icon={faFire} className="text-fire" />
+      <FontAwesomeIcon icon={faFire} className="text-fire" />
+      <FontAwesomeIcon icon={faFire} className="text-fire" />
     </div>
   );
 };
