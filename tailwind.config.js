@@ -23,10 +23,14 @@ export const theme = {
     delete: "#EF5350",
     "delete-hover": "#EF9A9A",
     fire: "yellow",
+    "non-fire": "#94A3B8",
     progress: "#C8C8C8",
     "progress-inside": "#1E88E5",
     "status-text": "#616161",
-    "status-bg": "#A5D6A7",
+    "green-status-bg": "#A5D6A7",
+    "yellow-status-bg": "#FFF59D",
+    "red-status-bg": "#EF9A9A",
+    "default-status-bg": "#A3A8A8",
   },
 };
 export const plugins = [];
