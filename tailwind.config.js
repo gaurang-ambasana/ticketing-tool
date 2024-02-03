@@ -23,6 +23,10 @@ export const theme = {
     delete: "#EF5350",
     "delete-hover": "#EF9A9A",
     fire: "yellow",
+    progress: "#C8C8C8",
+    "progress-inside": "#1E88E5",
+    "status-text": "#616161",
+    "status-bg": "#A5D6A7",
   },
 };
 export const plugins = [];
